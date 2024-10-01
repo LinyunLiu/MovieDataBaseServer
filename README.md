@@ -1,5 +1,9 @@
 # MovieDataBaseServer
 
+![Alt text](Example/Screenshot1.png "screenshot1")
+![Alt text](Example/Screenshot2.png "screenshot2")
+
+
 ### Deployment Instruction (For Ubuntu 22.04)
 
 ```bash
@@ -7,6 +11,7 @@ sudo apt update && sudo apt upgrade
 ```
 
 install mysql server ([https://www.digitalocean.com/community/tutorials/how-to-install-mysql-on-ubuntu-22-04](https://www.digitalocean.com/community/tutorials/how-to-install-mysql-on-ubuntu-22-04))
+
 
 ```bash
 # Install mysql-server
