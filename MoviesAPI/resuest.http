@@ -1,0 +1,2 @@
+###
+GET http://localhost:5087/watchlist/getwatchlist

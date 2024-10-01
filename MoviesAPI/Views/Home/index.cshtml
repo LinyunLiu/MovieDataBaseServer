@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="author" content="Movies, Linyun Liu"/>
+    <meta name="theme-color" content="#0c0c0c">
+    <link rel="shortcut icon" href="favicon.png"/>
+    <link rel="stylesheet" type="text/css" href="css/home.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <script src="js/home.js"></script>
+    <title>Home</title>
+</head>
+<body>
+    <div class="nav">
+        <a asp-controller="Home" asp-action="Index"><img src="favicon.png" alt="" class="icon"></a>
+        <a asp-controller="Home" asp-action="Index" style="color: #e48e66;">Home</a>
+        <a asp-controller="WatchList" asp-action="Index">Watchlist</a>
+        <a asp-controller="About" asp-action="Index">About</a>
+    </div>
+    <br><br><br><br><br>
+    <main>
+        <div class="search-bar" id="search-bar">
+            <div style="position: relative;">
+                <label class="switch">
+                    <input type="checkbox" id="ai-toggle" onchange="toggleAIFunction()">
+                    <span class="slider round"></span>
+                </label>
+                <input type="text" class="search" id="search" placeholder="Iron Man">
+                <p class="toggle-ai-text" id="toggle-ai-text">AI OFF</p>
+            </div>
+            <button class="btn-search" id="btn-search" onclick="search()">Search</button>
+        </div>
+        <div class="search-result" id="search-result">
+            
+        </div>
+        <div class="detail" id="detail">
+            <span class="loader" id="detail-loader"></span>
+            <div class="top" id="top">
+                <p class="close" onclick="toggleDetail(false)">CLOSE</p>
+                <div class="top-left">
+                    <div style="width: 200px; height: 280px; overflow: hidden;"><img class="poster" id="poster" src="" alt=""></div>
+                </div>
+                <div class="top-right">
+                    <p class="title" id="title"></p>
+                    <p class="director" id="director"></p>
+                    <p class="year-time-rated" id="year-time-rated"></p>
+                    <p class="genre" id="genre"></p>
+                    <div class="ratings" id="ratings">
+                        <img class="imdb" src="" alt="">
+                        <p></p>
+                        <img class="rt" src="" alt="">
+                        <p></p>
+                    </div>
+                    <button id="add-button"></button>
+                </div>
+            </div>
+            <div class="bottom" id="bottom">
+                <p id="plot"></p>
+            </div>
+        </div>
+        <br><br><br><br>
+        <span class="loader" id="loader"></span>
+        <div class="footer">
+            <p><i class="bi bi-patch-check-fill" style="color: lightblue; transform: translateY(-2px)"></i> 2024 Linyun | 
+                <a style="color: dimgray" asp-controller="Login" asp-action="Logout">Logout</a></p>
+        </div>
+    </main>
+</body>
+</html>

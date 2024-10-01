@@ -1,0 +1,25 @@
+@model Account
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="author" content="Movies, Linyun Liu"/>
+    <meta name="theme-color" content="#0c0c0c">
+    <link rel="shortcut icon" href="favicon.png"/>
+    <link rel="stylesheet" type="text/css" href="css/login.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <title>Login</title>
+</head>
+<body>
+    <main>
+        <form method="post" asp-action="Login">
+            <i class="bi bi-chat-left-heart-fill" style="color: #e48e66; font-size: 42px; transform: translateY(35px) translateX(100px)"></i>
+            <p class="title">Film Database</p>
+            <input asp-for="Username" required placeholder="Username"/>
+            <input asp-for="Password" required placeholder="Password"/>
+            <button type="submit">Login</button>
+        </form>
+    </main>
+</body>
+</html>

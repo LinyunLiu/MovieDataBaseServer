@@ -1,0 +1,95 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: 'nasalization';
+    src: url('../fonts/nasalization.otf')
+}
+@font-face {
+    font-family: 'dystopian';
+    src: url('../fonts/dystopian.otf')
+}
+body{
+    background-color: #222222;
+    padding: 0;
+    margin: 0;
+}
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    position: relative;
+}
+div.nav{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: #0c0c0c;
+    position: fixed;
+    top: 0;
+    height: 50px;
+    width: 100%;
+    padding-left: 25px;
+    z-index: 999;
+}
+div.nav a{
+    cursor: pointer;
+    font-family: 'nasalization', serif;
+    font-size: 16px;
+    text-decoration: none;
+    margin-right: 20px;
+    color: antiquewhite;
+    transition: .2s all ease-in-out;
+}
+div.nav a:hover{
+    color: #e48e66;
+}
+img.icon{
+    width: 35px;
+    margin-right: 20px;
+}
+div.footer{
+    margin-top: 20px;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    bottom: 5px;
+    left: 20px;
+    color: lightblue;
+    font-family: 'nasalization', serif;
+    font-size: 12px;
+}
+
+div.content{
+    width: 80vw;
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+p.title{
+    font-family: 'dystopian', serif;
+    font-size: 42px;
+    color: antiquewhite;
+    text-align: center;
+}
+p.intro{
+    font-family: 'nasalization', serif;
+    font-size: 16px;
+    color: antiquewhite;
+}
+div.images{
+    display: flex;
+    flex-direction: row;
+}
+div.images img{
+    width: 60px;
+    margin: 20px
+}

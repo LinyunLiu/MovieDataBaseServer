@@ -1,0 +1,241 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: 'nasalization';
+    src: url('../fonts/nasalization.otf')
+}
+@font-face {
+    font-family: 'dystopian';
+    src: url('../fonts/dystopian.otf')
+}
+body{
+    background-color: #222222;
+    padding: 0;
+    margin: 0;
+}
+main{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+div.nav{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: #0c0c0c;
+    position: fixed;
+    top: 0;
+    height: 50px;
+    width: 100%;
+    padding-left: 25px;
+}
+div.nav a{
+    cursor: pointer;
+    font-family: 'nasalization', serif;
+    font-size: 16px;
+    text-decoration: none;
+    margin-right: 20px;
+    color: antiquewhite;
+    transition: .2s all ease-in-out;
+}
+div.nav a:hover{
+    color: #e48e66;
+}
+img.icon{
+    width: 35px;
+    margin-right: 20px;
+}
+
+
+div.watchlist{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 90vw;
+    max-width: 1000px;
+    margin-top: 40px;
+}
+div.watchlist div{
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    margin: 5px;
+}
+div.watchlist div img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 4px;
+    transition: .1s all ease-in-out;
+}
+div.watchlist div img:hover{
+    border: 2px solid #e48e66;
+    opacity: 0.8;
+}
+div.watchlist div p{
+    width: 150px;
+    font-family: 'nasalization', serif;
+    margin: 0 0 0 10px;
+    font-size: 14px;
+    white-space: nowrap;
+}
+
+
+div.detail{
+    position: fixed;
+    width: 90vw;
+    max-width: 910px;
+    min-width: 400px;
+    height: 500px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 0.3rem 0 rgba(0, 0, 0, 0.2);
+    background-color: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(8px);
+    display: none;
+    flex-direction: column;
+    padding: 40px;
+}
+p.close{
+    cursor: pointer;
+    color: dimgray;
+    position: absolute;
+    top: -10px;
+    right: 5px;
+    font-family: 'nasalization', serif;
+    font-size: 14px;
+    transition: .2s all ease-in-out;
+}
+p.close:hover{
+    color: darkgray;
+}
+img.poster{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+div.top{
+    display: flex;
+    flex-direction: row;
+}
+div.top-left{
+    margin: 0 20px 0 0;
+}
+div.top-right{
+    display: flex;
+    flex-direction: column;
+}
+p.title{
+    font-family: 'dystopian', serif;
+    color: antiquewhite;
+    margin: 0;
+    font-size: clamp(18px, 5vw, 36px);
+}
+p.director{
+    font-family: 'nasalization', serif;
+    color: darkgray;
+    margin: 0;
+    font-size: clamp(8px, 2vw, 14px);
+    font-style: italic;
+}
+p.year-time-rated{
+    font-family: 'nasalization', serif;
+    color: darkgray;
+    margin: 10px 0 0 0;
+    font-size: clamp(8px, 2vw, 14px);
+}
+p.genre{
+    font-family: 'nasalization', serif;
+    color: darkgray;
+    margin: 0;
+    font-size: clamp(8px, 2vw, 14px);
+}
+div.ratings{
+    margin: 10px 0 0 -5px;
+    display: flex;
+    flex-direction: row;
+}
+div.ratings p{
+    font-family: 'nasalization', serif;
+    margin: -2px 15px 0 5px;
+    color: antiquewhite;
+
+}
+div.top-right button{
+    cursor: pointer;
+    margin: 20px 0 0 -2px;
+    background-color: #f7c702;
+    color: #0c0c0c;
+    height: 35px;
+    border: none;
+    font-family: 'nasalization', serif;
+    font-size: 14px;
+    border-radius: 4px;
+}
+img.imdb{
+    margin: 0;
+    width: 38px;
+    height: 15px;
+    border-radius: 2px;
+}
+img.rt{
+    margin: 0;
+    width: 18px;
+    height: 18px;
+}
+div.bottom{
+    font-family: 'nasalization', serif;
+    color: darkgray;
+    height: 220px;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    margin-top: 20px;
+    overflow: scroll;
+    font-size: clamp(12px, 2vw, 16px);
+}
+
+div.footer{
+    margin-top: 20px;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    bottom: 5px;
+    left: 20px;
+    color: lightblue;
+    font-family: 'nasalization', serif;
+    font-size: 12px;
+}
+
+/*Loader*/
+span.loader {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 48px;
+    height: 48px;
+    border: 5px solid gray;
+    border-bottom-color: transparent;
+    border-radius: 50%;
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+}
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+} 
