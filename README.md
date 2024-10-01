@@ -1,4 +1,4 @@
-# MovieDataBaseServer
+# MovieDataBaseServer (ASP.NET)
 ![Alt text](Example/Screenshot.png "Screenshot")
 ### Deployment Instruction (For Ubuntu 22.04)
 
