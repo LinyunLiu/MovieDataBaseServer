@@ -1,5 +1,5 @@
 # MovieDataBaseServer
-
+![Alt text](Example/Screenshot.png "Screenshot")
 ### Deployment Instruction (For Ubuntu 22.04)
 
 ```bash
@@ -301,6 +301,3 @@ sftp> root@xxx.xxx.xxx.xxx
 sftp> get Movies.zip
 
 ```
-
-![Alt text](Example/screenshot1.png "screenshot1")
-![Alt text](Example/screenshot2.png "screenshot2")
